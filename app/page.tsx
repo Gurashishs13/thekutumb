@@ -4,17 +4,20 @@ import ProductCard from '@/components/ProductCard'
 const products = [
   {
     name: 'Floral Kurti',
-    image: 'https://images.unsplash.com/photo-1610030469983-98e550d6193c',
+    image:
+      'https://images.unsplash.com/photo-1610030469983-98e550d6193c',
     price: 1499,
   },
   {
     name: 'Festive Saree',
-    image: 'https://images.unsplash.com/photo-1583391733981-8496f0b4f1c2',
+    image:
+      'https://images.unsplash.com/photo-1583391733981-8496f0b4f1c2',
     price: 2999,
   },
   {
     name: 'Elegant Co-ord Set',
-    image: 'https://images.unsplash.com/photo-1529139574466-a303027c1d8b',
+    image:
+      'https://images.unsplash.com/photo-1529139574466-a303027c1d8b',
     price: 2499,
   },
 ]
@@ -40,8 +43,7 @@ export default function Home() {
         </div>
       </section>
 
-
-<section className="max-w-7xl mx-auto px-6 py-20">
+      <section className="max-w-7xl mx-auto px-6 py-20">
         <h2 className="text-4xl font-bold mb-12 text-center">
           Featured Collection
         </h2>
