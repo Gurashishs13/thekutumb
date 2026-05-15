@@ -3,52 +3,82 @@ import ProductCard from '@/components/ProductCard'
 
 const products = [
   {
-    name: 'Floral Kurti',
-    image:
-      'https://images.unsplash.com/photo-1610030469983-98e550d6193c',
+    name: 'Luxury Co-ord Set',
+    image: '/products/Cordset1.jpg',
     price: 1499,
   },
   {
-    name: 'Festive Saree',
-    image:
-      'https://images.unsplash.com/photo-1583391733981-8496f0b4f1c2',
+    name: 'Festive Co-ord Set',
+    image: '/products/Cordset2.jpg',
     price: 2999,
   },
   {
-    name: 'Elegant Co-ord Set',
-    image:
-      'https://images.unsplash.com/photo-1529139574466-a303027c1d8b',
+    name: 'Elegant Designer Set',
+    image: '/products/Cordset3.jpg',
     price: 2499,
   },
 ]
 
 export default function Home() {
   return (
-    <main>
+    <main className="bg-[#f8f3ed] overflow-hidden">
+
       <Navbar />
 
-      <section className="h-screen bg-[#f7f3ee] flex items-center justify-center">
-        <div className="text-center px-4">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6">
-            The Kutumb
-          </h1>
+      {/* HERO SECTION */}
+      <section className="relative h-screen overflow-hidden">
 
-          <p className="text-lg text-gray-700 mb-8">
-            Fashion for Every Generation
+        <img
+          src="/products/hero.jpg"
+          alt="Hero"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+
+        {/* DARK OVERLAY */}
+        <div className="absolute inset-0 bg-black/65" />
+
+        {/* CONTENT */}
+        <div className="relative z-10 h-full flex flex-col justify-center items-center text-center px-6">
+
+          <p className="text-[#d4af37] uppercase tracking-[0.4em] mb-6 text-sm">
+            Luxury Ethnic Wear
           </p>
 
-          <button className="bg-black text-white px-8 py-4 rounded-full">
+          <h1 className="text-white text-4xl md:text-7xl font-bold leading-tight max-w-5xl">
+            Tradition Woven <br />
+            Into Modern Elegance
+          </h1>
+
+          <p className="text-gray-200 mt-8 text-lg md:text-2xl max-w-2xl">
+            Curated ethnic fashion for modern women and families.
+          </p>
+
+          <button className="mt-10 bg-[#d4af37] text-black px-10 py-4 rounded-full font-semibold hover:scale-105 transition duration-300 shadow-[0_0_40px_rgba(212,175,55,0.4)]">
+
             Explore Collection
+
           </button>
         </div>
       </section>
 
-      <section className="max-w-7xl mx-auto px-6 py-20">
-        <h2 className="text-4xl font-bold mb-12 text-center">
-          Featured Collection
-        </h2>
+      {/* FEATURED SECTION */}
+      <section className="max-w-7xl mx-auto px-6 py-24">
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="text-center mb-16">
+
+          <p className="uppercase tracking-[0.3em] text-[#a67c52] mb-4">
+            Featured Collection
+          </p>
+
+          <h2 className="text-5xl font-bold text-[#1a1a1a]">
+            Best Selling Styles
+          </h2>
+
+        </div>
+
+        {/* PRODUCTS */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+
           {products.map((product, index) => (
             <ProductCard
               key={index}
@@ -57,8 +87,10 @@ export default function Home() {
               price={product.price}
             />
           ))}
+
         </div>
       </section>
+
     </main>
   )
 }

@@ -1,25 +1,83 @@
+'use client'
+
 import Link from 'next/link'
-import { FiShoppingBag } from 'react-icons/fi'
+import {
+  FiShoppingBag,
+  FiUser,
+  FiSearch,
+  FiMenu,
+} from 'react-icons/fi'
 
 export default function Navbar() {
   return (
-    <nav className="w-full border-b bg-white sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <nav className="fixed top-0 left-0 w-full z-50">
 
-        <Link href="/" className="text-2xl font-bold tracking-wide">
+      {/* Glass Background */}
+      <div className="absolute inset-0 bg-black/40 backdrop-blur-xl border-b border-white/10"></div>
+
+      <div className="relative max-w-7xl mx-auto px-6 lg:px-10 py-5 flex items-center justify-between">
+
+        {/* LEFT */}
+        <div className="hidden lg:flex items-center gap-10 text-sm uppercase tracking-[0.2em] text-white font-medium">
+
+          <Link
+            href="/women"
+            className="hover:text-[#d4af37] transition duration-300"
+          >
+            Women
+          </Link>
+
+          <Link
+            href="/"
+            className="hover:text-[#d4af37] transition duration-300"
+          >
+            Festive
+          </Link>
+
+          <Link
+            href="/"
+            className="hover:text-[#d4af37] transition duration-300"
+          >
+            New Arrivals
+          </Link>
+
+        </div>
+
+        {/* LOGO */}
+        <Link
+          href="/"
+          className="text-white text-2xl md:text-4xl font-bold tracking-[0.35em]"
+        >
           THE KUTUMB
         </Link>
 
-        <div className="hidden md:flex gap-8 text-sm font-medium">
-          <Link href="/women">Women</Link>
-          <Link href="/">Festive</Link>
-          <Link href="/">New Arrivals</Link>
-          <Link href="/">Sale</Link>
-          </div>
+        {/* RIGHT */}
+        <div className="flex items-center gap-5 text-white">
 
-        <div className="flex items-center gap-4">
-          <FiShoppingBag size={22} />
+          <FiSearch
+            size={20}
+            className="cursor-pointer hover:text-[#d4af37] transition"
+          />
+
+          <FiUser
+            size={20}
+            className="cursor-pointer hover:text-[#d4af37] transition"
+          />
+
+          <FiShoppingBag
+            size={20}
+            className="cursor-pointer hover:text-[#d4af37] transition"
+          />
+
+          {/* MOBILE MENU */}
+          <div className="lg:hidden">
+            <FiMenu
+              size={24}
+              className="cursor-pointer"
+            />
+          </div>
         </div>
+
       </div>
     </nav>
   )

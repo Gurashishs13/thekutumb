@@ -10,20 +10,35 @@ export default function ProductCard({
   price,
 }: ProductProps) {
   return (
-    <div className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition duration-300">
-      <img
-        src={image}
-        alt={name}
-        className="w-full h-[400px] object-cover"
-      />
+    <div className="group">
 
-      <div className="p-4">
-        <h2 className="text-lg font-semibold">{name}</h2>
-        <p className="mt-2 text-gray-600">₹{price}</p>
+      <div className="overflow-hidden rounded-[30px] bg-white shadow-xl">
 
-        <button className="mt-4 w-full bg-black text-white py-3 rounded-xl">
-          Add to Cart
-        </button>
+        <div className="overflow-hidden">
+          <img
+            src={image}
+            alt={name}
+            className="w-full h-[500px] object-cover group-hover:scale-105 transition duration-700"
+          />
+        </div>
+
+        <div className="p-6">
+
+          <h2 className="text-2xl font-semibold text-[#1a1a1a]">
+            {name}
+          </h2>
+
+          <p className="mt-3 text-gray-600 text-lg">
+            ₹{price}
+          </p>
+
+          <button className="mt-6 w-full bg-black text-white py-4 rounded-full hover:bg-[#d4af37] hover:text-black transition duration-300">
+
+            Add To Cart
+
+          </button>
+
+        </div>
       </div>
     </div>
   )
