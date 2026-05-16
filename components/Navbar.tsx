@@ -12,12 +12,11 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 left-0 w-full z-50">
 
-      {/* Glass Background */}
       <div className="absolute inset-0 bg-black/40 backdrop-blur-xl border-b border-white/10"></div>
 
       <div className="relative max-w-7xl mx-auto px-6 lg:px-10 py-5 flex items-center justify-between">
 
-        {/* LEFT */}
+        {/* LEFT MENU */}
         <div className="hidden lg:flex items-center gap-10 text-sm uppercase tracking-[0.2em] text-white font-medium">
 
           <Link
@@ -51,7 +50,7 @@ export default function Navbar() {
           THE KUTUMB
         </Link>
 
-        {/* RIGHT */}
+        {/* RIGHT MENU */}
         <div className="flex items-center gap-5 text-white">
 
           <FiSearch
@@ -69,12 +68,8 @@ export default function Navbar() {
             className="cursor-pointer hover:text-[#d4af37] transition"
           />
 
-          {/* MOBILE MENU */}
           <div className="lg:hidden">
-            <FiMenu
-              size={24}
-              className="cursor-pointer"
-            />
+            <FiMenu size={24} />
           </div>
         </div>
 
