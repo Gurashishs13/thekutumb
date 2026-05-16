@@ -33,12 +33,9 @@ export default function ProductCard({
           </p>
 
           <button className="mt-6 w-full bg-black text-white py-4 rounded-full hover:bg-[#d4af37] hover:text-black transition duration-300">
-
             Add To Cart
-
           </button>
-
-        </div>
+       </div>
       </div>
     </div>
   )
